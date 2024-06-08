@@ -7,18 +7,43 @@
 
 import SwiftUI
 
+// This is a struct which conforms to the View protocol
+// SwiftUI has declarative syntax
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+//        VStack { // Vertical stack
+//            Image(systemName: "hand.wave")
+//                .imageScale(.large)
+//                .foregroundStyle(.tint)
+//            Text("Hello, world!")
+//        }
+//        .padding() // padding around the entire VStack!
+        Text("Nightly Tasks")
+        Text("Weekly Tasks")
+        Text("Monthly Tasks")
     }
 }
 
-#Preview {
+// Preview macro
+// This macros displays the content view in the canvas ro the right!
+// There can be multiple previews!!
+#Preview("Portrait") {
     ContentView()
+}
+
+// This will show a Landscape view option - Landscape Right!
+#Preview("Right", traits: .landscapeRight) {
+    ContentView()
+}
+
+// This will show a Landscape view option - Landscape Right!
+#Preview("Upside Down", traits: .portraitUpsideDown) {
+    ContentView()
+}
+
+// There is another protocol called PreviewProvider
+struct ContentView_Preview: PreviewProvider {
+    static var previews: some View { // Returns some view!
+        ContentView().previewInterfaceOrientation(.landscapeLeft).previewDisplayName("Left")
+    }
 }
