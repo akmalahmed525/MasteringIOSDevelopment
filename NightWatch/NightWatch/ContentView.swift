@@ -20,16 +20,52 @@ struct ContentView: View {
 //        .padding() // padding around the entire VStack!
         HStack {
             VStack(alignment: .leading) {
-                Text("Nightly Tasks")
+                // This is nightly
+                HStack {
+                    Text("\(Image(systemName: "moon.stars")) Nightly Tasks")
+                        .font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.heavy)
+                        .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.yellow/*@END_MENU_TOKEN@*/)
+                    .underline()
+                }
                 Text("[Nightly] Task 1")
+                Text("[Nightly] Task 2")
+                Text("[Nightly] Task 3")
+                Text("[Nightly] Task 4")
+                Text("[Nightly] Task 5")
                 
-                Text("Weekly Tasks")
+                // This is weekly
+                Text("\(Image(systemName: "sun.horizon.fill")) Weekly Tasks")
+                    .font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.heavy)
+                    .padding(.top)
+                    .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(/*@START_MENU_TOKEN@*/.yellow/*@END_MENU_TOKEN@*/)
+                    .underline()
                 Text("[Weekly] Task 1")
+                Text("[Weekly] Task 2")
+                Text("[Weekly] Task 3")
+                Text("[Weekly] Task 4")
+                Text("[Weekly] Task 5")
                 
-                Text("Monthly Tasks")
+                // This is monthly
+                Text("\(Image(systemName: "calendar")) Monthly Tasks")
+                    .font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.heavy)
+                    .padding(.top)
+                    .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.yellow)
+                    .underline()
                 Text("[Monthly] Task 1")
+                Text("[Monthly] Task 2")
+                Text("[Monthly] Task 3")
+                Text("[Monthly] Task 4")
+                Text("[Monthly] Task 5")
                 Spacer()
             }
+            .padding([.top, .leading], 10.0)
+            .foregroundStyle(.gray)
             Spacer()
         }
     }

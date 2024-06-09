@@ -20,7 +20,13 @@ struct SwiftUIView: View {
             Rectangle()
             HStack {
                 RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                // Order of the modifier matters!
                 Text("Hello World")
+                    .padding()
+                    .background(.green)
+                Text("Hello World")
+                    .background(.yellow)
+                    .padding()
             }
         }
     }
