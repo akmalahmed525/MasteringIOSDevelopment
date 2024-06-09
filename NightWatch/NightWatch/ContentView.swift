@@ -21,14 +21,10 @@ struct ContentView: View {
         HStack {
             VStack(alignment: .leading) {
                 // This is nightly
-                HStack {
-                    Text("\(Image(systemName: "moon.stars")) Nightly Tasks")
-                        .font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/)
-                        .fontWeight(.heavy)
-                        .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.yellow/*@END_MENU_TOKEN@*/)
-                    .underline()
-                }
+                // This is one way of reusing the styles
+                Text("\(Image(systemName: "moon.stars")) Nightly Tasks")
+                    .modifier(HeaderStyle())
+                    .padding([.top])
                 Text("[Nightly] Task 1")
                 Text("[Nightly] Task 2")
                 Text("[Nightly] Task 3")
@@ -37,12 +33,8 @@ struct ContentView: View {
                 
                 // This is weekly
                 Text("\(Image(systemName: "sun.horizon.fill")) Weekly Tasks")
-                    .font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/)
-                    .fontWeight(.heavy)
-                    .padding(.top)
-                    .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.yellow/*@END_MENU_TOKEN@*/)
-                    .underline()
+                    .headerStyle() // This is another way of reusing the same style
+                    .padding([.top])
                 Text("[Weekly] Task 1")
                 Text("[Weekly] Task 2")
                 Text("[Weekly] Task 3")
@@ -51,12 +43,8 @@ struct ContentView: View {
                 
                 // This is monthly
                 Text("\(Image(systemName: "calendar")) Monthly Tasks")
-                    .font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/)
-                    .fontWeight(.heavy)
-                    .padding(.top)
-                    .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(.yellow)
-                    .underline()
+                    .headerStyle()
+                    .padding([.top])
                 Text("[Monthly] Task 1")
                 Text("[Monthly] Task 2")
                 Text("[Monthly] Task 3")
@@ -70,6 +58,24 @@ struct ContentView: View {
         }
     }
 }
+
+
+struct HeaderStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content.font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/)
+            .fontWeight(.heavy)
+            .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
+            .foregroundColor(/*@START_MENU_TOKEN@*/.yellow/*@END_MENU_TOKEN@*/)
+            .underline()
+    }
+}
+
+extension View {
+    func headerStyle() -> some View {
+        self.modifier(HeaderStyle())
+    }
+}
+
 
 // Preview macro
 // This macros displays the content view in the canvas ro the right!
