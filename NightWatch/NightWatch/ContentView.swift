@@ -18,9 +18,20 @@ struct ContentView: View {
 //            Text("Hello, world!")
 //        }
 //        .padding() // padding around the entire VStack!
-        Text("Nightly Tasks")
-        Text("Weekly Tasks")
-        Text("Monthly Tasks")
+        HStack {
+            VStack(alignment: .leading) {
+                Text("Nightly Tasks")
+                Text("[Nightly] Task 1")
+                
+                Text("Weekly Tasks")
+                Text("[Weekly] Task 1")
+                
+                Text("Monthly Tasks")
+                Text("[Monthly] Task 1")
+                Spacer()
+            }
+            Spacer()
+        }
     }
 }
 
