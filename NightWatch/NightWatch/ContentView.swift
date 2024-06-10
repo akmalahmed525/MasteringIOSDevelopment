@@ -56,6 +56,7 @@ struct ContentView: View {
             .foregroundStyle(.gray)
             Spacer()
         }
+        // Can use Picker View, List View or Grid View instead!
     }
 }
 
@@ -66,7 +67,6 @@ struct HeaderStyle: ViewModifier {
             .fontWeight(.heavy)
             .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
             .foregroundColor(/*@START_MENU_TOKEN@*/.yellow/*@END_MENU_TOKEN@*/)
-            .underline()
     }
 }
 
