@@ -13,6 +13,7 @@
 		C10A5E6C2C14345500707E04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10A5E6B2C14345500707E04 /* Preview Assets.xcassets */; };
 		C10A5E742C146A4A00707E04 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10A5E732C146A4A00707E04 /* SwiftUIView.swift */; };
 		C1928AF12C1616FE0086D34E /* FirstSwiftUIListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1928AF02C1616FE0086D34E /* FirstSwiftUIListView.swift */; };
+		C19753932C17961F004E475D /* FirstSwiftUIGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19753922C17961F004E475D /* FirstSwiftUIGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C10A5E6B2C14345500707E04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C10A5E732C146A4A00707E04 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		C1928AF02C1616FE0086D34E /* FirstSwiftUIListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSwiftUIListView.swift; sourceTree = "<group>"; };
+		C19753922C17961F004E475D /* FirstSwiftUIGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSwiftUIGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				C10A5E732C146A4A00707E04 /* SwiftUIView.swift */,
 				C1928AF02C1616FE0086D34E /* FirstSwiftUIListView.swift */,
+				C19753922C17961F004E475D /* FirstSwiftUIGridView.swift */,
 			);
 			path = Experiments;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			files = (
 				C10A5E672C14345400707E04 /* ContentView.swift in Sources */,
 				C10A5E652C14345400707E04 /* NightWatchApp.swift in Sources */,
+				C19753932C17961F004E475D /* FirstSwiftUIGridView.swift in Sources */,
 				C10A5E742C146A4A00707E04 /* SwiftUIView.swift in Sources */,
 				C1928AF12C1616FE0086D34E /* FirstSwiftUIListView.swift in Sources */,
 			);
